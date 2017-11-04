@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>图片上传Demo</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.h5upload.js"></script>
+</head>
+<body>
+    <div>
+        h5图片上传控件使用方法：
+        <ol>
+            <li>引入jQuery</li>
+            <li>引入jQuery.h5upload</li>
+            <li>$("#id").h5upload();</li>
+        </ol>
+        <div style="color:red;font-size:12px;">
+            本控件非异步上传，提交后服务器根据表单name获取上传后的图片
+        </div>
+    </div>
+
+	<form action="upload.php" enctype="multipart/form-data" method="post">
+		<input type="text" name="uptext" size=20 />
+    	<div id="inputfiles">
+
+    	</div>
+		<input type="submit"/>
+	</form>
+
+    <script>
+        $("#inputfiles").h5upload();
+    </script>
+</body>
+</html>
